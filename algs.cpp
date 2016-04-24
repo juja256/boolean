@@ -1,8 +1,9 @@
 #include "core.h"
+#include <vector>
 
 BooleanVector ANF(BooleanVector& outs, u32 n) { // Fast Mebius Transform +++++
 	BooleanVector res(outs);
-	u64 s = outs.size;
+	u64 s = outs.GetSize();
 	u32 step, step2;
 	for (u32 i = 1; i <= n; i++) {
 		step = 1 << i;
@@ -14,6 +15,52 @@ BooleanVector ANF(BooleanVector& outs, u32 n) { // Fast Mebius Transform +++++
 		}
 	}
 	return res;
+}
+
+int* FFT(BooleanVector& outs, u32 n) {
+	u64 s = outs.GetSize();
+	int* spectre = new int[s];
+	for (u32 i = 0; i < s; i++)
+		spectre[i] = outs[i];
+
+	u32 step, step2;
+	int u0, u1;
+	for (u32 i = 1; i <= n; i++) {
+		step = 1 << i;
+		for (u32 j = 0; j < s; j += step) {
+			step2 = (step >> 1);
+			for (u32 k = j; k < j + step2; k += 1) {
+				u0 = spectre[k];
+				u1 = spectre[k + step2];
+				spectre[k] = u0 + u1;
+				spectre[k + step2] = u0 - u1;
+			}
+		}
+	}
+	return spectre;
+}
+
+int* WAT(BooleanVector& outs, u32 n) {
+	u64 s = outs.GetSize();
+	int* spectre = new int[s];
+	for (u32 i = 0; i < s; i++)
+		spectre[i] = outs[i] ? -1 : 1;
+
+	u32 step, step2;
+	int u0, u1;
+	for (u32 i = 1; i <= n; i++) {
+		step = 1 << i;
+		for (u32 j = 0; j < s; j += step) {
+			step2 = (step >> 1);
+			for (u32 k = j; k < j + step2; k += 1) {
+				u0 = spectre[k];
+				u1 = spectre[k + step2];
+				spectre[k] = u0 + u1;
+				spectre[k + step2] = u0 - u1;
+			}
+		}
+	}
+	return spectre;
 }
 
 u32 HammingWeight(u32 i) {

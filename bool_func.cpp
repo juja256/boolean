@@ -28,9 +28,14 @@ BooleanVector BooleanFunction::GetAlgebraicNormalForm(u32 index) {
 
 u32 BooleanFunction::GetAlgebraicDegree(u32 index) {
 	BooleanVector anf = this->GetAlgebraicNormalForm(index);
-	for (int i = anf.GetSize() - 1; i >= 0; i--) {
-		if (anf[i])
-			return 
+	u32 max = 0;
+	u32 hw;
+	for (int i = 0; i < anf.GetSize(); i++) {
+		hw = HammingWeight(i);
+		if (anf[i] && (hw > max))
+			max = hw;
 	}
-	return 0;
+	return max;
 }
+
+

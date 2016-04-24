@@ -43,17 +43,15 @@ public:
 
 	friend BooleanVector operator%(const BooleanVector& v1, const BooleanVector& v2);
 	friend BooleanVector operator<<(const BooleanVector& v, u32 p);
-	friend BooleanVector ANF(BooleanVector& outs, u32 n);
-	friend int* FourierSeries(BooleanVector& outs);
-	friend int* WalshAdamarSeries(BooleanVector& outs);
 };
 
 BooleanVector operator<<(const BooleanVector& v, u32 p);
 BooleanVector operator%(const BooleanVector& v1, const BooleanVector& v2);
+
 BooleanVector ANF(BooleanVector& outs, u32 n);
+int* FFT(BooleanVector& outs, u32 n);
+int* WAT(BooleanVector& outs, u32 n);
 u32 HammingWeight(u32 i);
-int* FourierSeries(BooleanVector& outs);
-int* WalshAdamarSeries(BooleanVector& outs);
 
 class BooleanFunction {
 	u32 n;
