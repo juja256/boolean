@@ -51,24 +51,27 @@ BooleanVector operator%(const BooleanVector& v1, const BooleanVector& v2);
 BooleanVector ANF(BooleanVector& outs, u32 n);
 int* FFT(BooleanVector& outs, u32 n);
 int* WAT(BooleanVector& outs, u32 n);
-u32 HammingWeight(u32 i);
+u32 HW(u32 i);
 
 class BooleanFunction {
 	u32 n;
 	u32 m;
 	BooleanVector* table;
 	u64 in_dim;
+	double** cached_FS;
+	int** cached_WS;
 public:
 	BooleanFunction(u32 n_, u32 m_, BooleanVector* table_);
 	BooleanFunction(u32 n_, u32 m_, BooleanVector (*function_ptr)(BooleanVector));
-	
+	~BooleanFunction();
 	BooleanVector GetCordinateVector(u32 i);
-	int* GetFourierSpectrum(u32 i);
+	double* GetFourierSpectrum(u32 i);
 	int* GetWalshSpectrum(u32 i);
 	BooleanVector GetAlgebraicNormalForm(u32 i);
+	u32 BooleanFunction::GetAlgebraicDegree();
 	u32 GetAlgebraicDegree(u32 i);
-	int GetUnlinearity(u32 i);
-	int GetDissballance(u32 i);
+	u32 GetUnlinearity(u32 i);
+	u32 GetDissballance(u32 i);
 	int GetErrorExpandingLevel(u32 i);
 	bool GetAvalancheEffectZeroLevel();
 	bool GetAvalancheEffectAverage();

@@ -164,7 +164,6 @@ BooleanVector operator%(const BooleanVector& v1, const BooleanVector& v2) {
 	while (res.Deg() >= n) {
 		k = res.Deg();
 		res = res ^ (v2 << k-n);
-		//PRINT_VECTOR(res)
 	}
 	return res;
 }
