@@ -1,7 +1,6 @@
 #include "core.h"
-#include <vector>
 
-BooleanVector ANF(BooleanVector& outs, u32 n) { // Fast Mebius Transform +++++
+BooleanVector ANF(const BooleanVector& outs, u32 n) { // Fast Mebius Transform +++++
 	BooleanVector res(outs);
 	u64 s = outs.GetSize();
 	u32 step, step2;
@@ -17,7 +16,7 @@ BooleanVector ANF(BooleanVector& outs, u32 n) { // Fast Mebius Transform +++++
 	return res;
 }
 
-int* FFT(BooleanVector& outs, u32 n) {
+int* FFT(const BooleanVector& outs, u32 n) {
 	u64 s = outs.GetSize();
 	int* spectre = new int[s];
 	for (u32 i = 0; i < s; i++)
@@ -40,7 +39,7 @@ int* FFT(BooleanVector& outs, u32 n) {
 	return spectre;
 }
 
-int* WAT(BooleanVector& outs, u32 n) {
+int* WAT(const BooleanVector& outs, u32 n) {
 	u64 s = outs.GetSize();
 	int* spectre = new int[s];
 	for (u32 i = 0; i < s; i++)
@@ -67,4 +66,12 @@ u32 HW(u32 i) {
 	i = i - ((i >> 1) & 0x55555555);
 	i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
 	return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
+}
+
+u32 HW(const BooleanVector& v) {
+	u32 w=0;
+	for (u32 i = 0; i < v.GetBlocks(); i++) {
+		w += HW(v.GetInt(i));
+	}
+	return w;
 }

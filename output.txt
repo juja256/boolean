@@ -1,0 +1,323 @@
+------------ f(v) = v^16257 mod (x^15 + x +1) ------------
+Whole Function
+Deg: 8
+Error expanding coefficients in average:
+244864 246144 246016 245888 245376 245760 245632 245504 246016 245888 245632 245376 245376 246016 246144 
+Error expanding in average coefficients deviation:
+0.36% 0.16% 0.1% 0.052% 0.16% 0% 0.052% 0.1% 0.1% 0.052% 0.052% 0.16% 0.16% 0.1% 0.16% 
+Presence of avalanche effect of zero level: 0
+Presence of avalanche effect in average: 0
+MDP: 6.1e-05 (2/32768)
+
+Coordinate function #1
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16128 16384 16384 16384 16384 16384 16384 16384 16384 16384 16384 16256 16384 16512 16384 
+Error expanding coefficients deviation:
+1.6% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0.78% 0% 0.78% 0% 
+
+Coordinate function #2
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16256 16384 16384 16384 16256 16256 16384 16384 16256 16512 16384 16256 16384 16256 16384 
+Error expanding coefficients deviation:
+0.78% 0% 0% 0% 0.78% 0.78% 0% 0% 0.78% 0.78% 0% 0.78% 0% 0.78% 0% 
+
+Coordinate function #3
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16256 16384 16512 16256 16384 16384 16256 16384 16384 16256 16384 16384 16512 16384 16384 
+Error expanding coefficients deviation:
+0.78% 0% 0.78% 0.78% 0% 0% 0.78% 0% 0% 0.78% 0% 0% 0.78% 0% 0% 
+
+Coordinate function #4
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16256 16512 16384 16384 16384 16384 16384 16512 16384 16512 16384 16256 16384 16384 
+Error expanding coefficients deviation:
+0% 0.78% 0.78% 0% 0% 0% 0% 0% 0.78% 0% 0.78% 0% 0.78% 0% 0% 
+
+Coordinate function #5
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16256 16384 16384 16384 16256 16384 16512 16256 16512 16384 16384 16384 16256 16512 16384 
+Error expanding coefficients deviation:
+0.78% 0% 0% 0% 0.78% 0% 0.78% 0.78% 0.78% 0% 0% 0% 0.78% 0.78% 0% 
+
+Coordinate function #6
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16512 16512 16384 16128 16256 16512 16256 16384 16384 16384 16384 16256 16384 16384 
+Error expanding coefficients deviation:
+0% 0.78% 0.78% 0% 1.6% 0.78% 0.78% 0.78% 0% 0% 0% 0% 0.78% 0% 0% 
+
+Coordinate function #7
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16256 16384 16384 16512 16256 16384 16384 16256 16512 16384 16256 16512 16256 16256 16384 
+Error expanding coefficients deviation:
+0.78% 0% 0% 0.78% 0.78% 0% 0% 0.78% 0.78% 0% 0.78% 0.78% 0.78% 0.78% 0% 
+
+Coordinate function #8
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16384 16256 16384 16512 16512 16256 16384 16512 16512 16256 16384 16512 16512 16384 
+Error expanding coefficients deviation:
+0% 0% 0.78% 0% 0.78% 0.78% 0.78% 0% 0.78% 0.78% 0.78% 0% 0.78% 0.78% 0% 
+
+Coordinate function #9
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16256 16384 16256 16384 16256 16384 16384 16384 16384 16384 16256 16512 16384 16384 16512 
+Error expanding coefficients deviation:
+0.78% 0% 0.78% 0% 0.78% 0% 0% 0% 0% 0% 0.78% 0.78% 0% 0% 0.78% 
+
+Coordinate function #10
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16512 16384 16384 16512 16512 16256 16384 16384 16384 16512 16384 16384 16512 16512 
+Error expanding coefficients deviation:
+0% 0.78% 0% 0% 0.78% 0.78% 0.78% 0% 0% 0% 0.78% 0% 0% 0.78% 0.78% 
+
+Coordinate function #11
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16512 16128 16512 16384 16384 16256 16384 16256 16256 16384 16256 16384 16384 16512 
+Error expanding coefficients deviation:
+0% 0.78% 1.6% 0.78% 0% 0% 0.78% 0% 0.78% 0.78% 0% 0.78% 0% 0% 0.78% 
+
+Coordinate function #12
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16256 16512 16256 16512 16256 16512 16384 16384 16384 16384 16256 16512 16384 16384 
+Error expanding coefficients deviation:
+0% 0.78% 0.78% 0.78% 0.78% 0.78% 0.78% 0% 0% 0% 0% 0.78% 0.78% 0% 0% 
+
+Coordinate function #13
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16384 16512 16256 16384 16512 16384 16512 16512 16384 16256 16384 16256 16384 16384 
+Error expanding coefficients deviation:
+0% 0% 0.78% 0.78% 0% 0.78% 0% 0.78% 0.78% 0% 0.78% 0% 0.78% 0% 0% 
+
+Coordinate function #14
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16512 16512 16512 16384 16384 16512 16384 16384 16512 16384 16384 16256 16384 16384 
+Error expanding coefficients deviation:
+0% 0.78% 0.78% 0.78% 0% 0% 0.78% 0% 0% 0.78% 0% 0% 0.78% 0% 0% 
+
+Coordinate function #15
+Dissb: 0
+Deg: 8
+NL: 16256
+CIL: 0
+Error expanding coefficients:
+16384 16512 16384 16512 16384 16384 16256 16384 16256 16384 16512 16256 16384 16384 16384 
+Error expanding coefficients deviation:
+0% 0.78% 0% 0.78% 0% 0% 0.78% 0% 0.78% 0% 0.78% 0.78% 0% 0% 0% 
+
+
+------------ g(v) = v^16256 mod (x^15 + x+ 1) ------------
+Whole Function
+Deg: 7
+Error expanding coefficients in average:
+245608 245288 244792 244352 245752 245352 244824 246272 246136 246496 246072 245024 245232 245648 245472 
+Error expanding in average coefficients deviation:
+0.062% 0.19% 0.39% 0.57% 0.0033% 0.17% 0.38% 0.21% 0.15% 0.3% 0.13% 0.3% 0.21% 0.046% 0.12% 
+Presence of avalanche effect of zero level: 0
+Presence of avalanche effect in average: 0
+MDP: 0.00024 (8/32768)
+
+Coordinate function #1
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16328 16008 16008 16360 16008 16520 16360 16256 16008 16480 16520 16136 16360 16520 16256 
+Error expanding coefficients deviation:
+0.34% 2.3% 2.3% 0.15% 2.3% 0.83% 0.15% 0.78% 2.3% 0.59% 0.83% 1.5% 0.15% 0.83% 0.78% 
+
+Coordinate function #2
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16472 16336 16240 16208 16272 16336 16048 16672 16448 16512 16504 16216 16152 16384 16376 
+Error expanding coefficients deviation:
+0.54% 0.29% 0.88% 1.1% 0.68% 0.29% 2.1% 1.8% 0.39% 0.78% 0.73% 1% 1.4% 0% 0.049% 
+
+Coordinate function #3
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16488 16416 16304 16456 16432 16392 16352 16344 16216 16288 16528 16312 16392 16264 16224 
+Error expanding coefficients deviation:
+0.63% 0.2% 0.49% 0.44% 0.29% 0.049% 0.2% 0.24% 1% 0.59% 0.88% 0.44% 0.049% 0.73% 0.98% 
+
+Coordinate function #4
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16224 16528 16376 16336 16320 16440 16264 16408 16480 16496 16168 16336 16176 16288 16376 
+Error expanding coefficients deviation:
+0.98% 0.88% 0.049% 0.29% 0.39% 0.34% 0.73% 0.15% 0.59% 0.68% 1.3% 0.29% 1.3% 0.59% 0.049% 
+
+Coordinate function #5
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16360 16424 16168 16288 16296 16312 16616 16304 16448 16512 16352 16096 16512 16536 16320 
+Error expanding coefficients deviation:
+0.15% 0.24% 1.3% 0.59% 0.54% 0.44% 1.4% 0.49% 0.39% 0.78% 0.2% 1.8% 0.78% 0.93% 0.39% 
+
+Coordinate function #6
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16576 16536 16592 16232 16408 16424 16424 16488 16600 16368 16176 16400 16224 16328 16336 
+Error expanding coefficients deviation:
+1.2% 0.93% 1.3% 0.93% 0.15% 0.24% 0.24% 0.63% 1.3% 0.098% 1.3% 0.098% 0.98% 0.34% 0.29% 
+
+Coordinate function #7
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16064 16288 16264 16296 16304 16248 16488 16448 16424 16264 16520 16536 16304 16184 16424 
+Error expanding coefficients deviation:
+2% 0.59% 0.73% 0.54% 0.49% 0.83% 0.63% 0.39% 0.24% 0.73% 0.83% 0.93% 0.49% 1.2% 0.24% 
+
+Coordinate function #8
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16400 16360 16136 16344 16264 16392 16248 16392 16464 16480 16640 16352 16160 16392 16704 
+Error expanding coefficients deviation:
+0.098% 0.15% 1.5% 0.24% 0.73% 0.049% 0.83% 0.049% 0.49% 0.59% 1.6% 0.2% 1.4% 0.049% 2% 
+
+Coordinate function #9
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16472 16240 16272 16048 16448 16504 16152 16376 16376 16488 16384 16408 16392 16432 16216 
+Error expanding coefficients deviation:
+0.54% 0.88% 0.68% 2.1% 0.39% 0.73% 1.4% 0.049% 0.049% 0.63% 0% 0.15% 0.049% 0.29% 1% 
+
+Coordinate function #10
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16224 16376 16320 16264 16480 16168 16176 16376 16472 16576 16344 16480 16320 16192 16352 
+Error expanding coefficients deviation:
+0.98% 0.049% 0.39% 0.73% 0.59% 1.3% 1.3% 0.049% 0.54% 1.2% 0.24% 0.59% 0.39% 1.2% 0.2% 
+
+Coordinate function #11
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16576 16592 16408 16424 16600 16176 16224 16336 16296 16520 16472 16448 16488 16432 16304 
+Error expanding coefficients deviation:
+1.2% 1.3% 0.15% 0.24% 1.3% 1.3% 0.98% 0.29% 0.54% 0.83% 0.54% 0.39% 0.63% 0.29% 0.49% 
+
+Coordinate function #12
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16400 16136 16264 16248 16464 16640 16160 16704 16496 16264 16200 16512 16512 16528 16448 
+Error expanding coefficients deviation:
+0.098% 1.5% 0.73% 0.83% 0.49% 1.6% 1.4% 2% 0.68% 0.73% 1.1% 0.78% 0.78% 0.88% 0.39% 
+
+Coordinate function #13
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16224 16320 16480 16176 16472 16344 16320 16352 16576 16280 16464 16304 16400 16432 16336 
+Error expanding coefficients deviation:
+0.98% 0.39% 0.59% 1.3% 0.54% 0.24% 0.39% 0.2% 1.2% 0.63% 0.49% 0.49% 0.098% 0.29% 0.29% 
+
+Coordinate function #14
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16400 16264 16464 16160 16496 16200 16512 16448 16488 16360 16256 16368 16480 16408 16368 
+Error expanding coefficients deviation:
+0.098% 0.73% 0.49% 1.4% 0.68% 1.1% 0.78% 0.39% 0.63% 0.15% 0.78% 0.098% 0.59% 0.15% 0.098% 
+
+Coordinate function #15
+Dissb: 0
+Deg: 7
+NL: 16044
+CIL: 0
+Error expanding coefficients:
+16400 16464 16496 16512 16488 16256 16480 16368 16344 16608 16544 16120 16360 16328 16432 
+Error expanding coefficients deviation:
+0.098% 0.49% 0.68% 0.78% 0.63% 0.78% 0.59% 0.098% 0.24% 1.4% 0.98% 1.6% 0.15% 0.34% 0.29% 
+

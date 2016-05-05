@@ -12,8 +12,9 @@ BooleanException::BooleanException(): code(0) {}
 
 BooleanException::BooleanException(u32 code_): code(code_) {}
 
-BooleanVector::BooleanVector(): size(0), blocks(0), a(0), heap_alloc(false) {
-
+BooleanVector::BooleanVector(): size(32), blocks(1), heap_alloc(true) {
+	this->a = new u32[1];
+	this->a[0] = 0;
 }
 
 BooleanVector::BooleanVector(u32 vec): size(32), blocks(1), heap_alloc(true) {
@@ -73,10 +74,10 @@ BooleanVector BooleanVector::GetInverse() {
 	return res;
 }
 
-u64 BooleanVector::GetSize() { return this->size; }
-u32 BooleanVector::GetBlocks() { return this->blocks; }
+u64 BooleanVector::GetSize() const { return this->size; }
+u32 BooleanVector::GetBlocks() const { return this->blocks; }
 
-bool BooleanVector::operator[](u32 i) {
+bool BooleanVector::operator[](u32 i) const {
 	return (this->a[i/32] & ( 1 << (i%32) )) >> (i%32);	
 }
 
@@ -116,11 +117,11 @@ BooleanVector operator<<(const BooleanVector& v, u32 p) {
 	}
 
 	int buf = 0;
-	for (int i=0; i<res.blocks; i++) {
+	for (u32 i=0; i<res.blocks; i++) {
 		u32 cur = res.a[i];
 		res.a[i] <<= p;
 		res.a[i] += buf;
-		buf = (cur & (MAX_U32 << 32 - p)) >> 32 -p;
+		buf = (cur & (MAX_U32 << (32 - p))) >> (32 -p);
 	}
 	return res;
 }
@@ -145,7 +146,6 @@ u32 BooleanVector::Deg() const { // Danger !!1
 }
 
 BooleanVector BooleanVector::operator*(const BooleanVector& vec) {
-	//u64 res_size = vec.blocks + this->blocks;
 	BooleanVector res((u64)0);
 	for (u32 i = 0; i < this->blocks; i++) {
 		for (u32 j = 0; j<32; j++) {
@@ -159,7 +159,7 @@ BooleanVector BooleanVector::operator*(const BooleanVector& vec) {
 
 BooleanVector operator%(const BooleanVector& v1, const BooleanVector& v2) {
 	u32 k;
-	u64 n = v2.Deg();
+	u32 n = v2.Deg();
 	BooleanVector res(v1);
 	while (res.Deg() >= n) {
 		k = res.Deg();
@@ -168,7 +168,10 @@ BooleanVector operator%(const BooleanVector& v1, const BooleanVector& v2) {
 	return res;
 }
 
-BooleanVector BooleanVector::Pow(u32 p, const BooleanVector& v) {
+BooleanVector BooleanVector::Pow(u32 p, const BooleanVector& v) const {
+	if (this->GetInt(0) == 0) {
+		return BooleanVector();
+	}
 	BooleanVector e(p);
 	BooleanVector b((u32)0x00000001);
 	BooleanVector c(*this);
@@ -188,4 +191,18 @@ bool BooleanVector::SetBit(u64 index, u32 b) {
 	if (index >= this->size) throw BooleanException(FLW_EXC);
 	this->a[block] ^= (-b ^ this->a[block]) & (1 << bit);
 	return b;
+}
+
+u32 BooleanVector::GetInt(u32 index) const {
+	if (index >= this->blocks) throw BooleanException(FLW_EXC);
+	return this->a[index];
+}
+
+void BooleanVector::operator++() {
+	this->a[this->blocks - 1]++;
+}
+
+void BooleanVector::Annulate() {
+	for (u32 i = 0; i < this->blocks; i++)
+		this->a[i] = 0;
 }
