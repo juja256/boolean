@@ -1,0 +1,115 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{pdflscape}
+\usepackage{fancyvrb}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{wrapfig}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{seqsplit}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{OliveGreen},
+  keywordstyle=\color{MidnightBlue},
+  extendedchars=\true,
+  inputencoding=utf8x,
+  breaklines=true,
+  basicstyle=\ttfamily\footnotesize
+}
+\usepackage{hyperref}
+
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+ %
+ %frame=lines,  % top and bottom rule only
+ %framesep=2em, % separation between frame and text
+ rulecolor=\color{Gray},
+ %
+ %label=\fbox{\color{Black}text2},
+ %labelposition=topline,
+}
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}
+    \large
+    Міністерство освіти і науки України
+    
+    Національний технічний університет України
+
+    \textit{“Київський політехнічний інститут”}
+    
+    Фізико-технічний інститут
+    \vspace{5cm}
+
+    \textsc{Розрахункова робота}\\[5mm]
+    \textit{з дисципліни}\\
+    
+    {\LARGE Симетрична криптографія }\\
+    {\large Варіант 18}
+  \bigskip
+    
+    
+\end{center}
+\vspace{3cm}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\large
+  Виконав:\\
+  \textit{Грубіян Є.О.}\\
+  Прийняв:\\
+  \textit{Яковлєв С.В.}\\ 
+  
+\end{minipage}
+\bigskip
+
+\vfill
+\vfill
+\vfill
+\begin{center}
+  Київ 2016 р.
+\end{center}
+
+\end{titlepage}
+\section*{Вступ}
+Тема розрахункової роботи - дослідження криптографічних властивостей булевих функцій. У запропонованому варіанті пропонуються дві булеві функції для дослідження, а саме: \( f(x) = x^{16257} \) та \( g(x) = x^{16256} \) , де \( x \in GF(2^{15}) \). В якості полінома генератора поля \( GF(2^{15}) \) використовується \( p(x) = x^{15} + x + 1 \).
+
+Програмний код розрахункової роботи написаний на мові C/C++, в силу того, що робота містить багато складних у обчислювальному плані процедур над полем \( GF(2^{15}) \), тому швидкодія є важливим аспектом. Вихідний код також доступний на ресурсі GitHub: \url{https://github.com/juja256/boolean}. Всі вказані параметри для двох булевих функцій в роботі обчислюються близько 20 хвилин на процесорі Intel Core i3-2310m @ 2.10 GHz x 2. Програма тестувалась під ОС Windows 10(Visual Studio 2015) та Linux Mint 17.3(GCC 4.8.4, рівень оптимізації -O3).
+
+\section*{Програмний код}
+\lstinputlisting[language=c++, caption=core.h]{core.h}
+\bigskip
+\lstinputlisting[language=c++, caption=algs.cpp]{algs.cpp}
+\bigskip
+\lstinputlisting[language=c++, caption=bool\_vec.cpp]{bool_vec.cpp}
+\bigskip
+\lstinputlisting[language=c++, caption=bool\_func.cpp]{bool_func.cpp}
+\bigskip
+\lstinputlisting[language=c++, caption=main.cpp]{main.cpp}
+\bigskip
+
+\section*{Звіт}
+Звіт містить всі криптографічні характеристики, які потрібно було обчислити та приблизний час виконання кожної процедури через вертикальну риску. 
+\lstinputlisting[caption=output.txt]{output.txt}
+
+\section*{Висновок}
+В ході розрахункової роботи було досліджено, що найкращими криптографічними параметрами володіє функція \( f(x) = x^{16257} \). Оскільки вона має хороші показники нелінійності(вона практично досягає максимального значення на кожній координатній функції) та володіє кореляційним імунітетом 0-го рівня за кожною координатною функцією, тобто є збалансованою за кожною координатною функцією. Разом з тим вона має низький максимум диференціальної ймовірності, всього 1/16384, тобто є порівняно стійкою до диференціального криптоаналізу. Хоча лавинні ефекти відсутні, відхилення коефіціентів розповсюдження помилок від середнього значення не є дуже великими, тобто дана функція володіє "майже" лавинним ефектом. Друга ж функція \( g(x) = x^{16256} \) також є непоганою, але все ж гіршою за першу. 
+
+Найбільш трудомісткою процедурою виявилась процедура знаходження максимальної диференціальної імовірності, близько 560 секунд(10хв.), інші ж параметри  обчислюються відносно швидко: в сумі для двох функцій всі параметри крім MDP займають менше хвилини.
+
+Отже, на мою думку, для криптографічних цілей функція \( f(x) = x^{16257} \) підходить добре.
+\end{document}
